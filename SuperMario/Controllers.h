@@ -1,5 +1,5 @@
 //
-//  Mario.h
+//  Controllers.h
 //
 //  Created by : Mr.Right
 //  Project    : SuperMario
@@ -15,7 +15,7 @@
 
 // -----------------------------------------------------------------
 
-@interface Mario : CCSprite
+@interface Controllers : CCScene
 
 // -----------------------------------------------------------------
 // properties
@@ -25,7 +25,6 @@
 
 + (instancetype)node;
 - (instancetype)init;
-+ (Mario*)createMario;
 
 // -----------------------------------------------------------------
 
