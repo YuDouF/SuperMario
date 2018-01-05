@@ -87,35 +87,32 @@ static MainScene *mainScene = nil;
 }
 
 //-(void)update:(CCTime) dt{
-//    CGPoint point1 = m_background1.position;
-//    CGPoint point2 = m_background2.position;
-//    point1.x -= 0.01;
-//    point2.x -= 0.01;
-//    if(point1.x <= -0.5){
-//        point1.x = 1.5;
-//    }
-//    if(point2.x <= -0.5){
-//        point2.x = 1.5;
-//    }
-//    [m_background1 setPosition:point1];
-//    [m_background2 setPosition:point2];
+//    [self updateBackground];
 //}
 -(void)updateBackground{
     CGPoint position1 = m_background1.position;
     position1.x -= 0.05;
     if(position1.x <= -0.5){
         position1.x = 1.5;
+        [m_background1 setPosition:position1];
     }
-    CCActionMoveTo *moveTo1 = [CCActionMoveTo actionWithDuration:0.3 position:position1];
-    [m_background1 runAction:moveTo1];
+    if(position1.x != 1.5){
+        CCActionMoveTo *moveTo1 = [CCActionMoveTo actionWithDuration:0.3 position:position1];
+        [m_background1 runAction:moveTo1];
+    }
+    
     
     CGPoint position2 = m_background2.position;
     position2.x -= 0.05;
     if(position2.x <= -0.5){
         position2.x = 1.5;
+        [m_background2 setPosition:position2];
     }
-    CCActionMoveTo *moveTo2 = [CCActionMoveTo actionWithDuration:0.3 position:position2];
-    [m_background2 runAction:moveTo2];
+    if(position2.x != 1.5){
+        CCActionMoveTo *moveTo2 = [CCActionMoveTo actionWithDuration:0.3 position:position2];
+        [m_background2 runAction:moveTo2];
+    }
+   
 }
 -(void)onEnter{
     [super onEnter];

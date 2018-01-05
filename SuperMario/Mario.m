@@ -17,18 +17,9 @@
 
 @implementation Mario{
 //    int m_bool;
-    enum STATUS{
-        SMALL = 0,
-        BIG,
-        STRONG,
-    };
-    enum DIRECTION{
-        FORWARD = 0,
-        BACKWARD,
-    };
     enum STATUS m_status;
     enum DIRECTION m_direction;
-    CGPoint lastPosition;
+    CGPoint m_lastPosition;
     Bullet *m_bullet;
 };
 static Mario *sharedMario = nil;
@@ -46,7 +37,8 @@ static Mario *sharedMario = nil;
     NSLog(@"init init init");
     m_status = SMALL;
     m_direction = FORWARD;
-    lastPosition = ccp(0, 0);
+    m_lastPosition = CGPointMake(0, 0);
+    
     m_bullet = nil;
     self = [CCSprite spriteWithImageNamed:@"white_square.png"];
 //    return [self initWithImageNamed:@"white_square.png"];
@@ -62,11 +54,17 @@ static Mario *sharedMario = nil;
 }
 
 - (CGPoint)getLastPosition{
-    return lastPosition;
+    return m_lastPosition;
 }
 - (void)setLastPosition:(CGPoint)point{
-    lastPosition = point;
+    m_lastPosition = point;
 }
+//- (STATUS)getStatus{
+//    return m_status;
+//}
+//- (void)setStatus:(STATUS)status{
+//    m_status = status;
+//}
 // -----------------------------------------------------------------
 
 @end

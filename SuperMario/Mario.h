@@ -16,7 +16,15 @@
 // -----------------------------------------------------------------
 
 @interface Mario : CCSprite
-
+enum STATUS{
+    SMALL = 0,
+    BIG,
+    STRONG,
+};
+enum DIRECTION{
+    FORWARD = 0,
+    BACKWARD,
+};
 // -----------------------------------------------------------------
 // properties
 
@@ -28,6 +36,9 @@
 + (Mario*)createMario;
 - (CGPoint)getLastPosition;
 - (void)setLastPosition:(CGPoint)point;
+//- (STATUS)getStatus;
+//- (void)setStatus:(STATUS)status;
+
 // -----------------------------------------------------------------
 
 @end

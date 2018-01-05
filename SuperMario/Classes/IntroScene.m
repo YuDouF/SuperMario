@@ -38,7 +38,7 @@
     m_background.contentSize = [CCDirector sharedDirector].viewSize;
     m_background.color = [CCColor blackColor];
     m_background.opacity = 0.5;
-    [self addChild:m_background];
+//    [self addChild:m_background];
 
 //    // The standard Hello World text
 //    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"ArialMT" fontSize:64];
@@ -50,7 +50,7 @@
     [m_startBtn setPosition:ccp(0.5, 0.5)];
     [m_startBtn setTarget:self selector:@selector(startGame:)];
     
-    [self addChild:m_startBtn];
+//    [self addChild:m_startBtn];
     // done
     return self;
 }

@@ -88,10 +88,14 @@
         CCActionMoveTo *moveTo = [CCActionMoveTo actionWithDuration:0.3 position:position];
         [mario runAction:moveTo];
     }
-    if(position.x > mario.getLastPosition.x){
-        MainScene *mainScene = [MainScene sharedMainScene];
-        [mainScene updateBackground];
-    }
+    //---------------------------point question-------
+    //    CGPoint pp = mario.getLastPosition;、
+//    if(position.x > pp.x){
+//        MainScene *mainScene = [MainScene sharedMainScene];
+//        [mainScene updateBackground];
+//    }
+    MainScene *mainScene = [MainScene sharedMainScene];
+    [mainScene updateBackground];
 }
 
 -(void)goBack:(id)sender{
@@ -102,7 +106,7 @@
     if(position.x <= 0){
         position.x = 0.05;
     }
-    [mario setLastPosition:position];
+//    [mario setLastPosition:position];
     CCActionMoveTo *moveTo = [CCActionMoveTo actionWithDuration:0.3 position:position];
     [mario runAction:moveTo];
 }
