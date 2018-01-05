@@ -1,5 +1,5 @@
 //
-//  Controllers.h
+//  Brick.m
 //
 //  Created by : Mr.Right
 //  Project    : SuperMario
@@ -10,26 +10,35 @@
 //
 // -----------------------------------------------------------------
 
-#import <Foundation/Foundation.h>
-#import "cocos2d.h"
-#import "cocos2d-ui.h"
+#import "Brick.h"
 
 // -----------------------------------------------------------------
 
-@interface Controllers : CCScene
+@implementation Brick
 
 // -----------------------------------------------------------------
-// properties
 
-// -----------------------------------------------------------------
-// methods
++ (instancetype)node
+{
+    return [[self alloc] init];
+}
 
-+ (instancetype)node;
-- (instancetype)init;
+- (instancetype)init
+{
+    self = [super init];
+    NSAssert(self, @"Unable to create class %@", [self class]);
+    // class initalization goes here
+    
+    
+    
+    
+    return self;
+}
 
 // -----------------------------------------------------------------
 
 @end
+
 
 
 

@@ -15,7 +15,10 @@
 
 // -----------------------------------------------------------------------
 
-@implementation IntroScene
+@implementation IntroScene{
+    CCSprite9Slice *m_background;
+    CCButton *m_startBtn;
+};
 
 // -----------------------------------------------------------------------
 
@@ -27,26 +30,27 @@
     // The thing is, that if this fails, your app will 99.99% crash anyways, so why bother
     // Just make an assert, so that you can catch it in debug
     NSAssert(self, @"Whoops");
-    
+    MainScene *mainScene = [MainScene sharedMainScene];
+    [self addChild:mainScene];
     // Background
-    CCSprite9Slice *background = [CCSprite9Slice spriteWithImageNamed:@"white_square.png"];
-    background.anchorPoint = CGPointZero;
-    background.contentSize = [CCDirector sharedDirector].viewSize;
-    background.color = [CCColor blackColor];
-    background.opacity = 0.5;
-    [self addChild:background];
+    m_background = [CCSprite9Slice spriteWithImageNamed:@"white_square.png"];
+    m_background.anchorPoint = CGPointZero;
+    m_background.contentSize = [CCDirector sharedDirector].viewSize;
+    m_background.color = [CCColor blackColor];
+    m_background.opacity = 0.5;
+    [self addChild:m_background];
 
 //    // The standard Hello World text
 //    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"ArialMT" fontSize:64];
 //    label.positionType = CCPositionTypeNormalized;
 //    label.position = (CGPoint){0.5, 0.5};
 //    [self addChild:label];
-    CCButton *startBtn = [CCButton buttonWithTitle:@"[ Start Game ]" fontName:@"ArialMT" fontSize:40];
-    [startBtn setPositionType:CCPositionTypeNormalized];
-    [startBtn setPosition:ccp(0.5, 0.5)];
-    [startBtn setTarget:self selector:@selector(startGame:)];
+    m_startBtn = [CCButton buttonWithTitle:@"[ Start Game ]" fontName:@"ArialMT" fontSize:40];
+    [m_startBtn setPositionType:CCPositionTypeNormalized];
+    [m_startBtn setPosition:ccp(0.5, 0.5)];
+    [m_startBtn setTarget:self selector:@selector(startGame:)];
     
-    [self addChild:startBtn];
+    [self addChild:m_startBtn];
     // done
     return self;
 }
@@ -62,10 +66,10 @@
     //加载音频
 }
 -(void)startGame:(id)sender{
-    
-//    [self setVisible:NO];
-    MainScene *mainScene = [MainScene new];
-    [[CCDirector sharedDirector] replaceScene:mainScene];
+    [m_background setVisible:NO];
+    [m_startBtn setVisible:NO];
+//    MainScene *mainScene = [MainScene new];
+//    [[CCDirector sharedDirector] replaceScene:mainScene];
 }
 
 // -----------------------------------------------------------------------

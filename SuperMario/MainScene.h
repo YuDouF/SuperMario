@@ -12,6 +12,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "cocos2d-ui.h"
 
 // -----------------------------------------------------------------
 
@@ -24,8 +25,12 @@
 // methods
 
 + (instancetype)node;
++ (MainScene*)sharedMainScene;
 - (instancetype)init;
-
+- (void)loadMario;
+- (void)loadBackground;
+- (void)updateBackground;
+- (void)loadControllers;
 // -----------------------------------------------------------------
 
 @end

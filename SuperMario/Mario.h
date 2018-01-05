@@ -26,7 +26,8 @@
 + (instancetype)node;
 - (instancetype)init;
 + (Mario*)createMario;
-
+- (CGPoint)getLastPosition;
+- (void)setLastPosition:(CGPoint)point;
 // -----------------------------------------------------------------
 
 @end

@@ -45,6 +45,8 @@ static Mario *sharedMario = nil;
     // class initalization goes here
     NSLog(@"init init init");
     m_status = SMALL;
+    m_direction = FORWARD;
+    lastPosition = ccp(0, 0);
     m_bullet = nil;
     self = [CCSprite spriteWithImageNamed:@"white_square.png"];
 //    return [self initWithImageNamed:@"white_square.png"];
@@ -52,11 +54,18 @@ static Mario *sharedMario = nil;
     return self;
 }
 +(Mario*) createMario{
-    NSLog(@"createMario");
+    
     if(sharedMario == nil){
-        sharedMario = [[Mario alloc] init];
+        sharedMario = [Mario new];
     }
     return sharedMario;
+}
+
+- (CGPoint)getLastPosition{
+    return lastPosition;
+}
+- (void)setLastPosition:(CGPoint)point{
+    lastPosition = point;
 }
 // -----------------------------------------------------------------
 

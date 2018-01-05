@@ -1,5 +1,5 @@
 //
-//  Controllers.h
+//  Brick.h
 //
 //  Created by : Mr.Right
 //  Project    : SuperMario
@@ -12,11 +12,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "cocos2d-ui.h"
 
 // -----------------------------------------------------------------
 
-@interface Controllers : CCScene
+@interface Brick : CCNode
 
 // -----------------------------------------------------------------
 // properties
