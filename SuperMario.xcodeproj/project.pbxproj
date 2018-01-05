@@ -203,8 +203,15 @@
 		0FA0980D1FFF58E3000957AC /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FA0980C1FFF58E3000957AC /* LICENSE_Chipmunk.txt */; };
 		0FA098111FFF58E3000957AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA098101FFF58E3000957AC /* main.m */; };
 		0FA098151FFF58E3000957AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA098141FFF58E3000957AC /* AppDelegate.m */; };
-		0FA098181FFF58E3000957AC /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA098171FFF58E3000957AC /* HelloWorldScene.m */; };
 		0FA0981A1FFF58E3000957AC /* white_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA098191FFF58E3000957AC /* white_square.png */; };
+		0FA098461FFF6178000957AC /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0983D1FFF6177000957AC /* MainScene.m */; };
+		0FA098471FFF6178000957AC /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0983E1FFF6177000957AC /* Bullet.m */; };
+		0FA098481FFF6178000957AC /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0983F1FFF6177000957AC /* Enemy.m */; };
+		0FA098491FFF6178000957AC /* Mario.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA098411FFF6177000957AC /* Mario.m */; };
+		0FA0984A1FFF6178000957AC /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA098441FFF6178000957AC /* Tool.m */; };
+		0FA0984F1FFF61AB000957AC /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA0984D1FFF61AB000957AC /* IntroScene.m */; };
+		0FA098521FFF6B55000957AC /* Brick.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA098511FFF6B55000957AC /* Brick.m */; };
+		0FA098551FFF8D1D000957AC /* Controllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA098541FFF8D1D000957AC /* Controllers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -661,9 +668,23 @@
 		0FA098101FFF58E3000957AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		0FA098131FFF58E3000957AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		0FA098141FFF58E3000957AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		0FA098161FFF58E3000957AC /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		0FA098171FFF58E3000957AC /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		0FA098191FFF58E3000957AC /* white_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white_square.png; path = Resources/white_square.png; sourceTree = "<group>"; };
+		0FA0983C1FFF6177000957AC /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
+		0FA0983D1FFF6177000957AC /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		0FA0983E1FFF6177000957AC /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		0FA0983F1FFF6177000957AC /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		0FA098401FFF6177000957AC /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		0FA098411FFF6177000957AC /* Mario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mario.m; sourceTree = "<group>"; };
+		0FA098421FFF6178000957AC /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		0FA098431FFF6178000957AC /* Mario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mario.h; sourceTree = "<group>"; };
+		0FA098441FFF6178000957AC /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		0FA098451FFF6178000957AC /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
+		0FA0984D1FFF61AB000957AC /* IntroScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
+		0FA0984E1FFF61AB000957AC /* IntroScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
+		0FA098501FFF6B55000957AC /* Brick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Brick.h; sourceTree = "<group>"; };
+		0FA098511FFF6B55000957AC /* Brick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Brick.m; sourceTree = "<group>"; };
+		0FA098531FFF8D1C000957AC /* Controllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Controllers.h; sourceTree = "<group>"; };
+		0FA098541FFF8D1D000957AC /* Controllers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Controllers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1540,10 +1561,24 @@
 		0FA098121FFF58E3000957AC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0FA0984E1FFF61AB000957AC /* IntroScene.h */,
+				0FA0984D1FFF61AB000957AC /* IntroScene.m */,
+				0FA0983C1FFF6177000957AC /* Bullet.h */,
+				0FA0983E1FFF6177000957AC /* Bullet.m */,
+				0FA098421FFF6178000957AC /* Enemy.h */,
+				0FA0983F1FFF6177000957AC /* Enemy.m */,
+				0FA098401FFF6177000957AC /* MainScene.h */,
+				0FA0983D1FFF6177000957AC /* MainScene.m */,
+				0FA098431FFF6178000957AC /* Mario.h */,
+				0FA098411FFF6177000957AC /* Mario.m */,
+				0FA098451FFF6178000957AC /* Tool.h */,
+				0FA098441FFF6178000957AC /* Tool.m */,
 				0FA098131FFF58E3000957AC /* AppDelegate.h */,
 				0FA098141FFF58E3000957AC /* AppDelegate.m */,
-				0FA098161FFF58E3000957AC /* HelloWorldScene.h */,
-				0FA098171FFF58E3000957AC /* HelloWorldScene.m */,
+				0FA098501FFF6B55000957AC /* Brick.h */,
+				0FA098511FFF6B55000957AC /* Brick.m */,
+				0FA098531FFF8D1C000957AC /* Controllers.h */,
+				0FA098541FFF8D1D000957AC /* Controllers.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1664,6 +1699,7 @@
 				0FA096CB1FFF58E2000957AC /* CCTableView.m in Sources */,
 				0FA0963E1FFF58E2000957AC /* CCSprite9Slice.m in Sources */,
 				0FA0966D1FFF58E2000957AC /* CCEffectRenderer.m in Sources */,
+				0FA0984A1FFF6178000957AC /* Tool.m in Sources */,
 				0FA095E21FFF58E2000957AC /* ccFPSImages.m in Sources */,
 				0FA097031FFF58E2000957AC /* base64.c in Sources */,
 				0FA0974E1FFF58E3000957AC /* OALAudioActions.m in Sources */,
@@ -1678,6 +1714,7 @@
 				0FA0961E1FFF58E2000957AC /* CCPhysicsNode.m in Sources */,
 				0FA097351FFF58E3000957AC /* CCBReader.m in Sources */,
 				0FA0978F1FFF58E3000957AC /* mach_timing.c in Sources */,
+				0FA098551FFF8D1D000957AC /* Controllers.m in Sources */,
 				0FA0974B1FFF58E3000957AC /* OALActionManager.m in Sources */,
 				0FA096751FFF58E2000957AC /* CCLightNode.m in Sources */,
 				0FA095AE1FFF58E1000957AC /* CCCache.m in Sources */,
@@ -1685,12 +1722,12 @@
 				0FA096AF1FFF58E2000957AC /* CCEffectNode.m in Sources */,
 				0FA096AC1FFF58E2000957AC /* CCEffectPixellate.m in Sources */,
 				0FA095D31FFF58E1000957AC /* CCClippingNode.m in Sources */,
-				0FA098181FFF58E3000957AC /* HelloWorldScene.m in Sources */,
 				0FA0972C1FFF58E3000957AC /* CCAnimationManager.m in Sources */,
 				0FA096B21FFF58E2000957AC /* CCEffectStack.m in Sources */,
 				0FA096661FFF58E2000957AC /* cocos2d.m in Sources */,
 				0FA0976D1FFF58E3000957AC /* ALContext.m in Sources */,
 				0FA096591FFF58E2000957AC /* CCTiledMapLayer.m in Sources */,
+				0FA0984F1FFF61AB000957AC /* IntroScene.m in Sources */,
 				0FA095931FFF58E1000957AC /* CCRenderDispatch.m in Sources */,
 				0FA096D31FFF58E2000957AC /* CCPlatformTextField.m in Sources */,
 				0FA096A91FFF58E2000957AC /* CCEffectColorPulse.m in Sources */,
@@ -1702,6 +1739,7 @@
 				0FA0961B1FFF58E2000957AC /* CCPhysicsJoint.m in Sources */,
 				0FA0962D1FFF58E2000957AC /* CCResponder.m in Sources */,
 				0FA096001FFF58E2000957AC /* CCNode+Debug.m in Sources */,
+				0FA098471FFF6178000957AC /* Bullet.m in Sources */,
 				0FA095F81FFF58E2000957AC /* CCMotionStreak.m in Sources */,
 				0FA096521FFF58E2000957AC /* CCTexturePVR.m in Sources */,
 				0FA0975E1FFF58E3000957AC /* OALSimpleAudio.m in Sources */,
@@ -1777,6 +1815,7 @@
 				0FA0977A1FFF58E3000957AC /* ALSource.m in Sources */,
 				0FA098151FFF58E3000957AC /* AppDelegate.m in Sources */,
 				0FA097961FFF58E3000957AC /* NSMutableDictionary+WeakReferences.m in Sources */,
+				0FA098481FFF6178000957AC /* Enemy.m in Sources */,
 				0FA096A31FFF58E2000957AC /* CCEffectContrast.m in Sources */,
 				0FA0970D1FFF58E3000957AC /* CCProfiling.m in Sources */,
 				0FA097701FFF58E3000957AC /* ALDevice.m in Sources */,
@@ -1795,10 +1834,13 @@
 				0FA095F11FFF58E2000957AC /* CCLayout.m in Sources */,
 				0FA097731FFF58E3000957AC /* ALListener.m in Sources */,
 				0FA0971D1FFF58E3000957AC /* NSThread+performBlock.m in Sources */,
+				0FA098491FFF6178000957AC /* Mario.m in Sources */,
 				0FA095CF1FFF58E1000957AC /* CCAnimationCache.m in Sources */,
 				0FA0964F1FFF58E2000957AC /* CCTextureCache.m in Sources */,
 				0FA096C51FFF58E2000957AC /* CCScrollView.m in Sources */,
 				0FA097931FFF58E3000957AC /* NSMutableArray+WeakReferences.m in Sources */,
+				0FA098461FFF6178000957AC /* MainScene.m in Sources */,
+				0FA098521FFF6B55000957AC /* Brick.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

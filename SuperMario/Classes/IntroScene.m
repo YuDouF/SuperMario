@@ -11,6 +11,7 @@
 // -----------------------------------------------------------------
 
 #import "IntroScene.h"
+#import "MainScene.h"
 
 // -----------------------------------------------------------------------
 
@@ -31,17 +32,40 @@
     CCSprite9Slice *background = [CCSprite9Slice spriteWithImageNamed:@"white_square.png"];
     background.anchorPoint = CGPointZero;
     background.contentSize = [CCDirector sharedDirector].viewSize;
-    background.color = [CCColor grayColor];
+    background.color = [CCColor blackColor];
+    background.opacity = 0.5;
     [self addChild:background];
+
+//    // The standard Hello World text
+//    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"ArialMT" fontSize:64];
+//    label.positionType = CCPositionTypeNormalized;
+//    label.position = (CGPoint){0.5, 0.5};
+//    [self addChild:label];
+    CCButton *startBtn = [CCButton buttonWithTitle:@"[ Start Game ]" fontName:@"ArialMT" fontSize:40];
+    [startBtn setPositionType:CCPositionTypeNormalized];
+    [startBtn setPosition:ccp(0.5, 0.5)];
+    [startBtn setTarget:self selector:@selector(startGame:)];
     
-    // The standard Hello World text
-    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"ArialMT" fontSize:64];
-    label.positionType = CCPositionTypeNormalized;
-    label.position = (CGPoint){0.5, 0.5};
-    [self addChild:label];
-    
+    [self addChild:startBtn];
     // done
     return self;
+}
+
+-(void)onEnter{
+    [super onEnter];
+    NSLog(@"onEnter........");
+    //加载音频
+}
+-(void)onExit{
+    [super onExit];
+    NSLog(@"onExit........");
+    //加载音频
+}
+-(void)startGame:(id)sender{
+    
+//    [self setVisible:NO];
+    MainScene *mainScene = [MainScene new];
+    [[CCDirector sharedDirector] replaceScene:mainScene];
 }
 
 // -----------------------------------------------------------------------
